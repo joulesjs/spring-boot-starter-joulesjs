@@ -1,0 +1,9 @@
+{
+    "properties": [
+      {
+        "name": "joulesjs.allowedIps",
+        "type": "java.util.List<String>",
+        "description": "Authorize connections originating from the given ips only"
+      }
+    ]
+  }
