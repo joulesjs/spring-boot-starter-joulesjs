@@ -1,4 +1,4 @@
 [submodule ".devcontainer"]
 	path = .devcontainer
-	url = https://github.com/efejjota/.devcontainer.git
+	url = https://github.com/codemecum/.devcontainer.git
 	branch = springboot
