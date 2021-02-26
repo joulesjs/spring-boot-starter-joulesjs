@@ -9,9 +9,9 @@
 		<version>2.4.2</version>
 	</parent>
 
-	<groupId>org.joulesjs</groupId>
+	<groupId>io.github.joulesjs</groupId>
 	<artifactId>spring-boot-starter-joulesjs</artifactId>
-	<version>0.1.0</version>
+	<version>0.2.0</version>
 
 	<name>spring-boot-starter-joulesjs</name>
 	<description>Starter for making hybrid desktop applications using Spring Boot ecosystem</description>
@@ -31,4 +31,11 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/joulesjs/spring-boot-starter-joulesjs</url>
+		</repository>
+	</distributionManagement>
 </project>
