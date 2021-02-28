@@ -11,7 +11,7 @@
 
 	<groupId>io.github.joulesjs</groupId>
 	<artifactId>spring-boot-starter-joulesjs</artifactId>
-	<version>0.4.0</version>
+	<version>0.4.1</version>
 
 	<name>spring-boot-starter-joulesjs</name>
 	<description>Starter for making hybrid desktop applications using Spring Boot ecosystem</description>
@@ -30,6 +30,7 @@
 			<groupId>com.github.seancfoley</groupId>
 			<artifactId>ipaddress</artifactId>
 			<version>5.3.3</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 	<distributionManagement>
