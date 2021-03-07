@@ -4,6 +4,16 @@
         "name": "joulesjs.allowedIps",
         "type": "java.util.List<String>",
         "description": "Authorize connections originating from the given ips only"
+      },
+      {
+        "name": "joulesjs.command",
+        "type": "java.util.List<String>",
+        "description": "Array containing the command to call when SpringBoot is ready.\n%s placeholder will be substituted by the server's url and port"
+      },
+      {
+        "name": "joulesjs.allowHeadless",
+        "type": "java.lang.Boolean",
+        "description": "Whether the server is allowed to continue running in the background once the process specified by 'joulesjs.command' has finished"
       }
     ]
   }
