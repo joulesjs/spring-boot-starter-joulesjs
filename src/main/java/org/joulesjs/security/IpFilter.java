@@ -38,8 +38,7 @@ public final class IpFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
-
-        IPAddress requesterIp = new IPAddressString(request.getRemoteAddr()).getAddress();
+        IPAddress requesterIp = getRequesterIp(request);
         boolean requesterIpIsAllowed =
             allowedIpMatchers.stream()
             .filter(allowedIpMatcher -> allowedIpMatcher.contains(requesterIp))
@@ -49,5 +48,11 @@ public final class IpFilter extends OncePerRequestFilter {
         if(requesterIpIsAllowed) {
             filterChain.doFilter(request, response);
         }
+    }
+
+    private static IPAddress getRequesterIp(HttpServletRequest request) {
+        // Remove IPv6 brackets before passing it to IPAddressString constructor
+        String ip = request.getRemoteAddr().replace("[", "").replace("]", "");
+        return new IPAddressString(ip).getAddress();
     }
 }
